@@ -1,17 +1,18 @@
-import { useState } from 'react'
-import './App.css'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import "./styling/App.css";
+import Homepage from "./Homepage.jsx";
 
 function App() {
-  const [name, setName] = useState('piyush');
-
-  const onClick = () => {
-    setName('john');
-  }
   return (
-    <>
-      <p onClick={onClick}>my name  is {name}</p>
-    </>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        {/* <Route path="/menu" element={<>} /> */}
+        {/* <Route path="/about" element={<About/>} /> */}
+      </Routes>
+    </BrowserRouter>
+  );
 }
- 
-export default App
+
+export default App;
