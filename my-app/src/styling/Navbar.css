@@ -37,11 +37,10 @@
 }
 
 .footer-logo{
-    width: 15%;
+    width: 10%;
 }
 .footer-logo img{
-    width: 60%;
-    height: 60px;
+    width: 100%;
 }
 .footer-items{
     width: 40%;
@@ -57,4 +56,16 @@
 
 .footer-link{
     color: white;
+}
+
+@media (max-width: 630px){
+    .nav-content{
+        display: none;
+    }
+    .footer-items{
+        display: none;
+    }
+    .footer-social{
+        display: none;
+    }
 }

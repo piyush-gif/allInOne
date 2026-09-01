@@ -28,17 +28,19 @@ const Homepage = () => {
     },
   ];
   return (
-    <div className="Homepage-container">
+    <div>
       <Navbar />
-      <div className="hompage-context-container">
-        <div className="hero-text-contianer">
-          <h1>Good Coffee,</h1>
-          <h1>Good Mood.</h1>
-          <h2> Your daily dose of great Coffee.</h2>
-          <button className="coco-button button">Explore Page</button>
-        </div>
-        <div className="hero-img-contianer">
-          <img src={coco}></img>
+      <div className="Homepage-container">
+        <div className="hompage-context-container">
+          <div className="hero-text-container">
+            <h1>Good Coffee,</h1>
+            <h1>Good Mood.</h1>
+            <h2> Your daily dose of great Coffee.</h2>
+            <button className="coco-button button">Explore Page</button>
+          </div>
+          <div className="hero-img-container">
+            <img src={coco}></img>
+          </div>
         </div>
       </div>
       <div className="homepage-mid-section">
