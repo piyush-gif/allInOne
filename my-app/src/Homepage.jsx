@@ -3,7 +3,30 @@ import coco from "./assets/coffee-coco.webp";
 import CoffeeCards from "./components/CoffeeCards";
 import Footer from "./components/Footer";
 import Navbar from "./Navbar";
+import cappi from "./assets/cappuccino.jpg";
+import latte from "./assets/matcha-latte.jpg.avif";
+import espresso from "./assets/espresso.jpg";
 const Homepage = () => {
+  const storage = [
+    {
+      img: cappi,
+      name: "Cappuccino",
+      description: "Espresso, chocolate and steamed milk",
+      price: 3,
+    },
+    {
+      img: latte,
+      name: "Matcha-latte",
+      description: "Strong espresso with steamed milk and vanilla",
+      price: 3,
+    },
+    {
+      img: espresso,
+      name: "Espresso",
+      description: "strong rich and simple",
+      price: 3,
+    },
+  ];
   return (
     <div className="Homepage-container">
       <Navbar />
@@ -21,7 +44,7 @@ const Homepage = () => {
       <div className="homepage-mid-section">
         <h1>Our Favorites</h1>
         <div className="mid-container">
-          <CoffeeCards />
+          <CoffeeCards storage={storage} />
         </div>
       </div>
       <div className="homepage-footer">

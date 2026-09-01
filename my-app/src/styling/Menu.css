@@ -1,0 +1,16 @@
+.menu-container{
+    display: flex;
+    justify-content: center;
+}
+
+.menu-content{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.menu-list{
+    display: flex;
+    flex-direction: column;
+}
