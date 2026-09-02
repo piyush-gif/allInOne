@@ -1,7 +1,5 @@
 .about-content {
   display: flex;
-  justify-content: center;
-  width: 100%;
 }
 
 .about-text {
@@ -18,4 +16,16 @@
 .about-img img{
     width: 100%;
     height: 100%;
+}
+
+@media (max-width: 600px) {
+    .about-text{
+        padding: 0px;
+    }
+    .about-content{
+        flex-direction: column;
+    }
+    .about-img{
+        width: 100%;
+    }
 }

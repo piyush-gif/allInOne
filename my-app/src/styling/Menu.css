@@ -39,7 +39,16 @@
 
 @media (max-width: 600px) {
     .menu-list{
-        flex-direction: column;
+        grid-template-columns: 1fr;
+    }
+    .menu-buttons{
+        width: 100%;
+    }
+    .pages-content{
+        padding: 0px;
+    }
+    .pages-detail{
+        width: 100%;
     }
     
 }
