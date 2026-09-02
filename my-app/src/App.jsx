@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./styling/App.css";
 import Homepage from "./Homepage.jsx";
 import Menu from "./Menu.jsx";
+import About from "./About.jsx";
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/menu" element={<Menu />} />
-        {/* <Route path="/about" element={<About/>} /> */}
+        <Route path="/about" element={<About />} />
       </Routes>
     </BrowserRouter>
   );

@@ -46,7 +46,9 @@ const Homepage = () => {
       <div className="homepage-mid-section">
         <h1>Our Favorites</h1>
         <div className="mid-container">
-          <CoffeeCards storage={storage} />
+          <div className="card-container">
+            <CoffeeCards storage={storage} />
+          </div>
         </div>
       </div>
       <div className="homepage-footer">
