@@ -1,6 +1,7 @@
 import Navbar from "./Navbar.jsx";
 import img from "./assets/about-img.jpg";
 import "./styling/About.css";
+import Footer from "./components/Footer.jsx";
 const About = () => {
   return (
     <div className="">
@@ -21,6 +22,7 @@ const About = () => {
           <img src={img} />
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

@@ -27,3 +27,19 @@
     display: flex;
     justify-content: center;
 }
+
+.pages-detail{
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+}
+.pages-detail span{
+    padding-top: 10px;
+}
+
+@media (max-width: 600px) {
+    .menu-list{
+        flex-direction: column;
+    }
+    
+}
