@@ -27,6 +27,7 @@ const Homepage = () => {
       price: 3,
     },
   ];
+
   return (
     <div>
       <Navbar />

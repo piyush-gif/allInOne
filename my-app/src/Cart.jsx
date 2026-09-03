@@ -6,7 +6,9 @@ const Cart = () => {
       <Navbar />
       <div>
         <div>Your Order</div>
-        <div></div>
+        <div>
+          <CheckoutCard />
+        </div>
       </div>
     </div>
   );
