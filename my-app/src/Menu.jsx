@@ -14,6 +14,8 @@ const Menu = () => {
       description: "Espresso, steamed milk and rich foam",
       price: 4,
       category: "coffee",
+      id: 1,
+      quantity: 0,
     },
     {
       img: latte,
@@ -21,6 +23,8 @@ const Menu = () => {
       description: "Smooth espresso with steamed milk and vanilla",
       price: 5,
       category: "coffee",
+      id: 2,
+      quantity: 0,
     },
     {
       img: espresso,
@@ -28,6 +32,8 @@ const Menu = () => {
       description: "Strong, rich and simple",
       price: 3,
       category: "coffee",
+      id: 3,
+      quantity: 0,
     },
     {
       img: "americano",
@@ -35,6 +41,8 @@ const Menu = () => {
       description: "Espresso with hot water for a smooth finish",
       price: 4,
       category: "coffee",
+      id: 4,
+      quantity: 0,
     },
     {
       img: "mocha",
@@ -42,6 +50,8 @@ const Menu = () => {
       description: "Espresso, chocolate and steamed milk",
       price: 5,
       category: "coffee",
+      id: 5,
+      quantity: 0,
     },
     {
       img: "macchiato",
@@ -49,6 +59,8 @@ const Menu = () => {
       description: "Espresso topped with a small amount of foam",
       price: 4,
       category: "coffee",
+      id: 6,
+      quantity: 0,
     },
     {
       img: "flatWhite",
@@ -56,6 +68,8 @@ const Menu = () => {
       description: "Rich espresso with velvety steamed milk",
       price: 5,
       category: "coffee",
+      id: 7,
+      quantity: 0,
     },
     {
       img: "coldBrew",
@@ -63,6 +77,8 @@ const Menu = () => {
       description: "Slow brewed coffee served chilled and smooth",
       price: 5,
       category: "cold drinks",
+      id: 8,
+      quantity: 0,
     },
     {
       img: "matcha",
@@ -70,6 +86,8 @@ const Menu = () => {
       description: "Creamy matcha blended with smooth steamed milk",
       price: 5,
       category: "tea",
+      id: 9,
+      quantity: 0,
     },
     {
       img: "caramelLatte",
@@ -77,6 +95,8 @@ const Menu = () => {
       description: "Espresso, steamed milk and sweet caramel",
       price: 6,
       category: "coffee",
+      id: 10,
+      quantity: 0,
     },
   ];
   const [currentPage, setCurrentPage] = useState(1);

@@ -13,18 +13,27 @@ const Homepage = () => {
       name: "Cappuccino",
       description: "Espresso, chocolate and steamed milk",
       price: 3,
+      category: "coffee",
+      id: 1,
+      quantity: 0,
     },
     {
       img: latte,
       name: "Matcha-latte",
       description: "Strong espresso with steamed milk and vanilla",
       price: 3,
+      category: "coffee",
+      id: 2,
+      quantity: 0,
     },
     {
       img: espresso,
       name: "Espresso",
       description: "strong rich and simple",
       price: 3,
+      category: "coffee",
+      id: 3,
+      quantity: 0,
     },
   ];
 

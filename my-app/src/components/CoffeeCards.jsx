@@ -1,19 +1,32 @@
-import { useState } from "react";
+import { Component, useState } from "react";
 const CoffeeCards = ({ storage }) => {
   const [cart, setCart] = useState(
     JSON.parse(localStorage.getItem("cart")) || [],
   );
 
-  const addToCart = (items) => {
-    const updatedCart = [...cart, items];
+  localStorage.removeItem("cart");
 
-    setCart(updatedCart);
-    localStorage.setItem("cart", JSON.stringify(updatedCart));
+  const addToCart = (items) => {
+    const selectedItem = cart.find((cartItem) => cartItem.id === items.id);
+
+    if (selectedItem) {
+      const updatedCart = cart.map((cartItem) => {
+        cartItem.id === items.id
+          ? { ...cartItem, quantiy: cartItem.quantity + 1 }
+          : cartItem;
+      });
+      setCart(updatedCart);
+      localStorage.setItem("cart", JSON.stringify(updatedCart));
+    } else {
+      const updatedCart = [...cart, { ...items, quantity: 1 }];
+      setCart(updatedCart);
+      localStorage.setItem("cart", JSON.stringify(updatedCart));
+    }
   };
   return (
     <>
-      {storage.map((items, index) => (
-        <div key={index} className="card-details">
+      {storage.map((items) => (
+        <div className="card-details" key={items.id}>
           <img src={items.img}></img>
           <h1>{items.name}</h1>
           <p>{items.description}</p>
