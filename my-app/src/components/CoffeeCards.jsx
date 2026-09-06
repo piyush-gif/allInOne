@@ -1,20 +1,15 @@
-import { Component, useState } from "react";
+import { useState } from "react";
 const CoffeeCards = ({ storage }) => {
   const [cart, setCart] = useState(
     JSON.parse(localStorage.getItem("cart")) || [],
   );
 
-  localStorage.removeItem("cart");
-
   const addToCart = (items) => {
-    const selectedItem = cart.find((cartItem) => cartItem.id === items.id);
-
-    if (selectedItem) {
-      const updatedCart = cart.map((cartItem) => {
-        cartItem.id === items.id
-          ? { ...cartItem, quantiy: cartItem.quantity + 1 }
-          : cartItem;
-      });
+    const updatedCart = cart.find((item) => item.id === items.id);
+    if (updatedCart) {
+      const updatedCart = cart.map((item) =>
+        item.id === items.id ? { ...item, quantity: item.quantity + 1 } : item,
+      );
       setCart(updatedCart);
       localStorage.setItem("cart", JSON.stringify(updatedCart));
     } else {
