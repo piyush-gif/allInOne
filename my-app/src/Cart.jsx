@@ -1,13 +1,11 @@
-import Navbar from "./Navbar";
 import CheckoutCard from "./components/CheckoutCard";
-const Cart = () => {
+const Cart = ({ cart, setCart }) => {
   return (
     <div>
-      <Navbar />
       <div className="order-div">
         <div>Your Order</div>
         <div className="order-list">
-          <CheckoutCard />
+          <CheckoutCard cart={cart} setCart={setCart} />
         </div>
       </div>
     </div>

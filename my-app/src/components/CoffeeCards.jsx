@@ -1,9 +1,5 @@
 import { useState } from "react";
-const CoffeeCards = ({ storage }) => {
-  const [cart, setCart] = useState(
-    JSON.parse(localStorage.getItem("cart")) || [],
-  );
-
+const CoffeeCards = ({ storage, cart, setCart }) => {
   const addToCart = (items) => {
     const updatedCart = cart.find((item) => item.id === items.id);
     if (updatedCart) {

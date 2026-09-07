@@ -1,11 +1,9 @@
-import Navbar from "./Navbar.jsx";
 import img from "./assets/about-img.jpg";
 import "./styling/About.css";
 import Footer from "./components/Footer.jsx";
 const About = () => {
   return (
     <div className="">
-      <Navbar />
       <div className="about-content">
         <div className="about-text">
           <h1>Our Story</h1>

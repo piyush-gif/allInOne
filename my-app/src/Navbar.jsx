@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import "./styling/Navbar.css";
 import coffee from "./assets/brew.png";
-const Navbar = () => {
+const Navbar = ({ cart }) => {
+  const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
   return (
     <div className="nav-container">
       <div className="nav-logo">
@@ -21,6 +22,7 @@ const Navbar = () => {
       <div className="nav-sidebar">
         <Link to="/cart" className="nav-link">
           Cart🛒
+          {cartCount}
         </Link>
       </div>
     </div>

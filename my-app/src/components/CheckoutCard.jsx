@@ -1,10 +1,7 @@
 import { useState } from "react";
 
 import "../styling/Checkout.css";
-const CheckoutCard = () => {
-  const [cart, setCart] = useState(
-    JSON.parse(localStorage.getItem("cart")) || [],
-  );
+const CheckoutCard = ({ cart, setCart }) => {
   const addToCart = (items) => {
     const updatedCart = cart.map((item) =>
       item.id === items.id ? { ...item, quantity: item.quantity + 1 } : item,

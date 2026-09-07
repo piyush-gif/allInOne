@@ -2,7 +2,6 @@ import CoffeeCards from "./components/CoffeeCards";
 import cappi from "./assets/cappuccino.jpg";
 import latte from "./assets/matcha-latte.jpg.avif";
 import espresso from "./assets/espresso.jpg";
-import Navbar from "./Navbar";
 import "./styling/Menu.css";
 import Footer from "./components/Footer";
 import { useState } from "react";
@@ -13,7 +12,7 @@ import flatWhite from "./assets/white-flat.jpg";
 import coldBrew from "./assets/cold-brew.jpg";
 import matcha from "./assets/matcha-latte.jpg";
 import caramelLatte from "./assets/caramel-latte.jpg";
-const Menu = () => {
+const Menu = ({ cart, setCart }) => {
   const menu = [
     {
       img: cappi,
@@ -123,7 +122,6 @@ const Menu = () => {
 
   return (
     <div>
-      <Navbar />
       <div>
         <div className="menu-container">
           <h1>Our Menu</h1>
@@ -173,7 +171,7 @@ const Menu = () => {
         </div>
         <div className="menu-content">
           <div className="menu-list">
-            <CoffeeCards storage={currentItems} />
+            <CoffeeCards storage={currentItems} cart={cart} setCart={setCart} />
           </div>
         </div>
       </div>

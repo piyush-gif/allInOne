@@ -15,6 +15,20 @@ button{
     border: 1px solid #e5e5e5;
 }
 
+.link-coco{
+    background-color: rgb(80, 94, 60);
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    color: white;
+    border: 1px solid #e5e5e5;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
 button:hover{
     cursor: pointer;
      transform: scale(1.05);
@@ -27,6 +41,23 @@ button:hover{
     border-radius: 10px;
     color: white;
     border: 1px solid #ffffff;
+}
+
+.link-brown{
+    
+        background-color: rgb(68, 45, 29);
+        width: 120px;
+        height: 40px;
+        border-radius: 10px;
+        color: white;
+        border: 1px solid #ffffff;
+
+        /* Needed for Link (<a>) elements */
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        box-sizing: border-box;
 }
 
 a{
