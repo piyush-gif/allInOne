@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import "../styling/Checkout.css";
 const CheckoutCard = ({ cart, setCart }) => {
   const addToCart = (items) => {
@@ -30,8 +28,8 @@ const CheckoutCard = ({ cart, setCart }) => {
 
   return (
     <>
-      {cart.map((items, index) => (
-        <div key={index} className="item-details">
+      {cart.map((items) => (
+        <div key={items.id} className="item-details">
           <img src={items.img}></img>
           <p>{items.name}</p>
           <p>${items.price * items.quantity}</p>

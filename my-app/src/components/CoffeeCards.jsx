@@ -1,17 +1,15 @@
 const CoffeeCards = ({ storage, cart, setCart }) => {
   const addToCart = (items) => {
-    const updatedCart = cart.find((item) => item.id === items.id);
-    if (updatedCart) {
-      const updatedCart = cart.map((item) =>
-        item.id === items.id ? { ...item, quantity: item.quantity + 1 } : item,
-      );
-      setCart(updatedCart);
-      localStorage.setItem("cart", JSON.stringify(updatedCart));
-    } else {
-      const updatedCart = [...cart, { ...items, quantity: 1 }];
-      setCart(updatedCart);
-      localStorage.setItem("cart", JSON.stringify(updatedCart));
-    }
+    const existingItem = cart.find((item) => item.id === items.id);
+    const updatedCart = existingItem
+      ? cart.map((item) =>
+          item.id === items.id
+            ? { ...item, quantity: item.quantity + 1 }
+            : item,
+        )
+      : [...cart, { ...items, quantity: 1 }];
+    setCart(updatedCart);
+    localStorage.setItem("cart", JSON.stringify(updatedCart));
   };
   return (
     <>

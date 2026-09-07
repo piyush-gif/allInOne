@@ -2,9 +2,6 @@ import "./styling/Homepage.css";
 import coco from "./assets/coffee-coco.webp";
 import CoffeeCards from "./components/CoffeeCards";
 import Footer from "./components/Footer";
-import cappi from "./assets/cappuccino.jpg";
-import latte from "./assets/matcha-latte.jpg.avif";
-import espresso from "./assets/espresso.jpg";
 import { Link } from "react-router-dom";
 import { menuData } from "./data/storage";
 const Homepage = ({ cart, setCart }) => {
