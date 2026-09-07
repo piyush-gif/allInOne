@@ -41,7 +41,7 @@ const Homepage = () => {
     <div>
       <Navbar />
       <div className="Homepage-container">
-        <div className="hompage-context-container">
+        <div className="homepage-context-container">
           <div className="hero-text-container">
             <h1>Good Coffee,</h1>
             <h1>Good Mood.</h1>

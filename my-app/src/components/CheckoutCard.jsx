@@ -31,18 +31,43 @@ const CheckoutCard = () => {
     localStorage.setItem("cart", JSON.stringify(updatedCart));
   };
 
+  const subtotal = cart.reduce(
+    (total, item) => total + item.price * item.quantity,
+    0,
+  );
+
+  const tax = subtotal * 0.1;
+  const total = subtotal + tax;
+
   return (
     <>
       {cart.map((items, index) => (
         <div key={index} className="item-details">
+          <img src={items.img}></img>
           <p>{items.name}</p>
           <p>${items.price * items.quantity}</p>
-          <button onClick={() => addToCart(items)}>+</button>
-          <p>{items.quantity}</p>
-          <button onClick={() => decreaseQuantity(items)}>-</button>
-          <button onClick={() => removeItem(items)}>🗑️</button>
+          <div className="checkout-buttons">
+            <button onClick={() => addToCart(items)}>+</button>
+            <p>{items.quantity}</p>
+            <button onClick={() => decreaseQuantity(items)}>-</button>
+            <button onClick={() => removeItem(items)}>🗑️</button>
+          </div>
         </div>
       ))}
+
+      <div className="checkout-total">
+        <h1>Subtotal</h1>
+        <p>${subtotal.toFixed(2)}</p>
+
+        <h3>Tax (10%)</h3>
+        <p>${tax.toFixed(2)}</p>
+
+        <hr />
+
+        <h1>Total</h1>
+        <h1>${total.toFixed(2)}</h1>
+        <button className="coco-button">Checkout</button>
+      </div>
     </>
   );
 };

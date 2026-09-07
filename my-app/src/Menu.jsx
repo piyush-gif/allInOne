@@ -6,6 +6,13 @@ import Navbar from "./Navbar";
 import "./styling/Menu.css";
 import Footer from "./components/Footer";
 import { useState } from "react";
+import americano from "./assets/americano.jpg";
+import mocha from "./assets/mocha.jpg";
+import macchiato from "./assets/macchiato.jpg";
+import flatWhite from "./assets/white-flat.jpg";
+import coldBrew from "./assets/cold-brew.jpg";
+import matcha from "./assets/matcha-latte.jpg";
+import caramelLatte from "./assets/caramel-latte.jpg";
 const Menu = () => {
   const menu = [
     {
@@ -36,7 +43,7 @@ const Menu = () => {
       quantity: 0,
     },
     {
-      img: "americano",
+      img: americano,
       name: "Americano",
       description: "Espresso with hot water for a smooth finish",
       price: 4,
@@ -45,7 +52,7 @@ const Menu = () => {
       quantity: 0,
     },
     {
-      img: "mocha",
+      img: mocha,
       name: "Mocha",
       description: "Espresso, chocolate and steamed milk",
       price: 5,
@@ -54,7 +61,7 @@ const Menu = () => {
       quantity: 0,
     },
     {
-      img: "macchiato",
+      img: macchiato,
       name: "Macchiato",
       description: "Espresso topped with a small amount of foam",
       price: 4,
@@ -63,7 +70,7 @@ const Menu = () => {
       quantity: 0,
     },
     {
-      img: "flatWhite",
+      img: flatWhite,
       name: "Flat White",
       description: "Rich espresso with velvety steamed milk",
       price: 5,
@@ -72,7 +79,7 @@ const Menu = () => {
       quantity: 0,
     },
     {
-      img: "coldBrew",
+      img: coldBrew,
       name: "Cold Brew",
       description: "Slow brewed coffee served chilled and smooth",
       price: 5,
@@ -81,7 +88,7 @@ const Menu = () => {
       quantity: 0,
     },
     {
-      img: "matcha",
+      img: matcha,
       name: "Matcha Latte",
       description: "Creamy matcha blended with smooth steamed milk",
       price: 5,
@@ -90,7 +97,7 @@ const Menu = () => {
       quantity: 0,
     },
     {
-      img: "caramelLatte",
+      img: caramelLatte,
       name: "Caramel Latte",
       description: "Espresso, steamed milk and sweet caramel",
       price: 6,
