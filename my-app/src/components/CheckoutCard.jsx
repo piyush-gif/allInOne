@@ -28,14 +28,6 @@ const CheckoutCard = ({ cart, setCart }) => {
     localStorage.setItem("cart", JSON.stringify(updatedCart));
   };
 
-  const subtotal = cart.reduce(
-    (total, item) => total + item.price * item.quantity,
-    0,
-  );
-
-  const tax = subtotal * 0.1;
-  const total = subtotal + tax;
-
   return (
     <>
       {cart.map((items, index) => (
@@ -51,20 +43,6 @@ const CheckoutCard = ({ cart, setCart }) => {
           </div>
         </div>
       ))}
-
-      <div className="checkout-total">
-        <h1>Subtotal</h1>
-        <p>${subtotal.toFixed(2)}</p>
-
-        <h3>Tax (10%)</h3>
-        <p>${tax.toFixed(2)}</p>
-
-        <hr />
-
-        <h1>Total</h1>
-        <h1>${total.toFixed(2)}</h1>
-        <button className="coco-button">Checkout</button>
-      </div>
     </>
   );
 };

@@ -6,37 +6,9 @@ import cappi from "./assets/cappuccino.jpg";
 import latte from "./assets/matcha-latte.jpg.avif";
 import espresso from "./assets/espresso.jpg";
 import { Link } from "react-router-dom";
+import { menuData } from "./data/storage";
 const Homepage = ({ cart, setCart }) => {
-  const storage = [
-    {
-      img: cappi,
-      name: "Cappuccino",
-      description: "Espresso, chocolate and steamed milk",
-      price: 3,
-      category: "coffee",
-      id: 1,
-      quantity: 0,
-    },
-    {
-      img: latte,
-      name: "Matcha-latte",
-      description: "Strong espresso with steamed milk and vanilla",
-      price: 3,
-      category: "coffee",
-      id: 2,
-      quantity: 0,
-    },
-    {
-      img: espresso,
-      name: "Espresso",
-      description: "strong rich and simple",
-      price: 3,
-      category: "coffee",
-      id: 3,
-      quantity: 0,
-    },
-  ];
-
+  const menuItems = menuData.slice(0, 3).map((items) => items);
   return (
     <div>
       <div className="Homepage-container">
@@ -44,7 +16,7 @@ const Homepage = ({ cart, setCart }) => {
           <div className="hero-text-container">
             <h1>Good Coffee,</h1>
             <h1>Good Mood.</h1>
-            <h2> Your daily dose of great Coffee.</h2>
+            <h2>Your daily dose of great Coffee.</h2>
             <Link className="link-coco" to="/menu">
               Explore Page
             </Link>
@@ -58,7 +30,7 @@ const Homepage = ({ cart, setCart }) => {
         <h1>Our Favorites</h1>
         <div className="mid-container">
           <div className="card-container">
-            <CoffeeCards storage={storage} cart={cart} setCart={setCart} />
+            <CoffeeCards storage={menuItems} cart={cart} setCart={setCart} />
           </div>
         </div>
       </div>

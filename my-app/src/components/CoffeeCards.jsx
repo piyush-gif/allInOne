@@ -1,4 +1,3 @@
-import { useState } from "react";
 const CoffeeCards = ({ storage, cart, setCart }) => {
   const addToCart = (items) => {
     const updatedCart = cart.find((item) => item.id === items.id);
@@ -23,7 +22,7 @@ const CoffeeCards = ({ storage, cart, setCart }) => {
           <p>{items.description}</p>
           <h3>${items.price}</h3>
           <button className="coco-button" onClick={() => addToCart(items)}>
-            Addo to Cart
+            Add to Cart
           </button>
         </div>
       ))}
